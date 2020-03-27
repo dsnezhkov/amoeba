@@ -22,7 +22,6 @@ FIRST DATA CORP:0000883980
 
 **Problem:** However, sometimes we don't know the official name used for SEC registration. Let's say we only know part of the name.
 
-
 ```
 $ ./amoeba.py edgar -O find-corp-name -n "FIRST data"
 Error:  'FIRST DATA'
@@ -412,7 +411,7 @@ On January 16, 2019, we announced that Fiserv has agreed to acquire First Data
 in an all-stock transaction, uniting two premier companies to create one of
 ----
 
-        >>>  Merger Agreement ) pursuant to which the Company will acquire First Data
+        >>> Merger Agreement) pursuant to which the Company will acquire First Data
 
 
 -- Context -- 
@@ -427,7 +426,7 @@ Corporation in an all-stock transaction. A copy of the joint press release is
 -- Context -- 
 
 This is important, because in December, we announced the intent to acquire
-Cashcard Australia Limited. It s a leading electronic payment service
+Cashcard Australia Limited. Its a leading electronic payment service
 ----
         >>> 1. First Data's acquisition of Concord would combine the largest and third-largest point-of-sale ("POS") PIN debit networks in the United States. POS PIN debit networks are the telecommunications and payment infrastructure that connects merchants to consumers' demand deposit accounts at banks. These networks enable consumers to purchase goods and services from merchants through PIN debit transactions by swiping their bank card at a merchant's terminal and entering a Personal Identification Number, or PIN. Within seconds, the purchase amount is debited from the customer's bank account and transferred to the retailer's bank. 
 
@@ -456,12 +455,12 @@ only two years ago, the DOJ approved Concord's acquisition of STAR, which
 resulted in Concord handling approximately 60% of exactly the same
 ----
 
-        >>> customers' needs. This quarter, for example, we acquired 51% of Eposs a
+        >>> customers' needs. This quarter, for example, we acquired 51% of Epossa
 
 
 -- Context -- 
 distribution network by acquiring companies that have products to meet our
-customers' needs. This quarter, for example, we acquired 51% of Eposs a
+customers' needs. This quarter, for example, we acquired 51% of Epossa
 company that specializes in cellular prepaid products, focusing on serving
 ----
 
