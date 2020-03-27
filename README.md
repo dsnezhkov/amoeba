@@ -1,4 +1,3 @@
-
 # Amoeba: Subsidiary Search and Corp Intel
 
 > Amoebas eat algae, bacteria, plant cells, and microscopic protozoa and metazoa – some amoebas are parasites. They eat by surrounding tiny particles of food with pseudopods, forming a bubble-like food vacuole. The food vacuole digests the food.
