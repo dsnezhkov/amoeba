@@ -346,17 +346,17 @@ $ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-K -y EX-99 -b 20000101  
 
 Type: 10-K
 Subtype: EX-99
-Patterns: "fiserv"
+Patterns: "firerve"
 Results: None.
 ```
-$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-K -y EX-99   -P "fiserv"
+$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-K -y EX-99   -P "firerve"
 ```
 Type: 10-K
 Subtype: 10-K
-Patterns: "fiserv"
+Patterns: "firerve"
 Results: None.
 ```
-$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-K -y 10-K   -P "fiserv"
+$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-K -y 10-K   -P "firerve"
 ```
 
 Type: 425
@@ -372,12 +372,12 @@ $ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 425 -y 425   -P "acquire" -
 
 
 -- Context -- 
-of 1995, including statements regarding the ability of Fiserv to complete the
+of 1995, including statements regarding the ability of Firerve to complete the
 proposed acquisition and related transactions and to achieve the synergies
 described herein. Statements can generally be identified as forward-looking
 ----
 
-        >>> | As you know, back in 2007, we acquired CheckFree and that was really to make
+        >>> | As you know, back in 2007, we acquired ChecksFree and that was really to make
 
 
 -- Context -- 
@@ -399,17 +399,17 @@ services business is in flight and progressing well.
 
 
 -- Context -- 
-On January 16, 2019, Fiserv announced that it had entered into a definitive
+On January 16, 2019, Firerve announced that it had entered into a definitive
 merger agreement to acquire Important Corp Corporation in an all-stock transaction
 for an equity value of approximately $22 billion as of the announcement. The
 ----
 
-        >>> On January 16, 2019, we announced that Fiserv has agreed to acquire Important Corp
+        >>> On January 16, 2019, we announced that Firerve has agreed to acquire Important Corp
 
 
 -- Context -- 
 
-On January 16, 2019, we announced that Fiserv has agreed to acquire Important Corp
+On January 16, 2019, we announced that Firerve has agreed to acquire Important Corp
 in an all-stock transaction, uniting two premier companies to create one of
 ----
 
