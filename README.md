@@ -1,6 +1,8 @@
+
 # Amoeba: Subsidiary Search and Corp Intel
 
 > Amoebas eat algae, bacteria, plant cells, and microscopic protozoa and metazoa – some amoebas are parasites. They eat by surrounding tiny particles of food with pseudopods, forming a bubble-like food vacuole. The food vacuole digests the food.
+
 
 It is surprisingly complex to get a quick answer to the question of what subsidiaries does even a _public_ company own. There are several companies that have created paid products to aggregate corporate information, and do a good job of providing access to their paid API. 
 
@@ -16,65 +18,66 @@ Amoeba shaves some minutes/hours from operator's time by providing tool assisted
 
 **Solution**: Find the CIK by the exact name known to us:
 ```
-$ ./amoeba.py edgar -O find-corp-name -n "first data corp"
-FIRST DATA CORP:0000883980
+$ ./amoeba.py edgar -O find-corp-name -n "important data corp"
+IMPORTANT CORP CORP:0000994980
 ```
 
 **Problem:** However, sometimes we don't know the official name used for SEC registration. Let's say we only know part of the name.
 
+
 ```
-$ ./amoeba.py edgar -O find-corp-name -n "FIRST data"
-Error:  'FIRST DATA'
+$ ./amoeba.py edgar -O find-corp-name -n "IMPORTANT data"
+Error:  'IMPORTANT CORP'
 ```
 We may need to find similar sounding corps and then choose the right one.
 
 **Solution** Let's `fuzzy` search the corporations:
 
 ```
-$ ./amoeba.py  edgar -O find-corps-names -N "First Data" -N "FirstData"
-FIRST DATA AVIATION LLC:0001442062
-FIRST DATA CAPITAL, INC.:0001442061
-FIRST DATA CARD SOLUTIONS, INC.:0001442052
-FIRST DATA COMMERCIAL SERVICES HOLDINGS, INC.:0001442050
-FIRST DATA COMMUNICATIONS CORP:0001442048
-FIRST DATA CORP:0000883980
-FIRST DATA CORPORATION:0000883980
-FIRST DATA DIGITAL CERTIFICATES INC.:0001442047
-FIRST DATA EC, LLC:0001467812
-FIRST DATA FINANCIAL SERVICES, L.L.C.:0001442046
-FIRST DATA GOVERNMENT SOLUTIONS, INC.:0001442045
-FIRST DATA GOVERNMENT SOLUTIONS, LLC:0001442044
-FIRST DATA GOVERNMENT SOLUTIONS, LP:0001442043
-FIRST DATA HOLDINGS INC.:0001611166
-FIRST DATA INTEGRATED SERVICES INC.:0001442042
-FIRST DATA LATIN AMERICA INC.:0001442041
-FIRST DATA MERCHANT SERVICES CORP:0001442040
-FIRST DATA MERCHANT SERVICES NORTHEAST, LLC:0001442038
-FIRST DATA MERCHANT SERVICES SOUTHEAST, L.L.C.:0001442037
-FIRST DATA MOBILE HOLDINGS, INC.:0001442036
-FIRST DATA PAYMENT SERVICES, LLC:0001442034
-FIRST DATA PITTSBURGH ALLIANCE PARTNER INC.:0001442033
-FIRST DATA PS ACQUISITION INC.:0001442032
-FIRST DATA REAL ESTATE HOLDINGS L.L.C.:0001442031
-FIRST DATA RESOURCES, LLC:0001442030
-FIRST DATA RETAIL ATM SERVICES L.P.:0001442029
-FIRST DATA SECURE LLC:0001442028
-FIRST DATA SOLUTIONS INC:0001141473
-FIRST DATA SOLUTIONS L.L.C.:0001442027
-FIRST DATA TECHNOLOGIES, INC.:0001442026
-FIRST DATA TRANSPORTATION SERVICES, INC.:0001442077
-FIRST DATA VOICE SERVICES:0001442024
-FIRST DATA, L.L.C.:0001442023
-FIRST SOURCE DATA, INC.:0001350573
+$ ./amoeba.py  edgar -O find-corps-names -N "Important Corp" -N "ImportantCorp"
+IMPORTANT CORP AVIATION LLC:0001442062
+IMPORTANT CORP CAPITAL, INC.:0001442061
+IMPORTANT CORP CARD SOLUTIONS, INC.:0001442052
+IMPORTANT CORP COMMERCIAL SERVICES HOLDINGS, INC.:0001442050
+IMPORTANT CORP COMMUNICATIONS CORP:0001442048
+IMPORTANT CORP CORP:0000994980
+IMPORTANT CORP CORPORATION:0000994980
+IMPORTANT CORP DIGITAL CERTIFICATES INC.:0001442047
+IMPORTANT CORP EC, LLC:0001467812
+IMPORTANT CORP FINANCIAL SERVICES, L.L.C.:0001442046
+IMPORTANT CORP GOVERNMENT SOLUTIONS, INC.:0001442045
+IMPORTANT CORP GOVERNMENT SOLUTIONS, LLC:0001442044
+IMPORTANT CORP GOVERNMENT SOLUTIONS, LP:0001442043
+IMPORTANT CORP HOLDINGS INC.:0001611166
+IMPORTANT CORP INTEGRATED SERVICES INC.:0001442042
+IMPORTANT CORP LATIN AMERICA INC.:0001442041
+IMPORTANT CORP MERCHANT SERVICES CORP:0001442040
+IMPORTANT CORP MERCHANT SERVICES NORTHEAST, LLC:0001442038
+IMPORTANT CORP MERCHANT SERVICES SOUTHEAST, L.L.C.:0001442037
+IMPORTANT CORP MOBILE HOLDINGS, INC.:0001442036
+IMPORTANT CORP PAYMENT SERVICES, LLC:0001442034
+IMPORTANT CORP PITTSBURGH ALLIANCE PARTNER INC.:0001442033
+IMPORTANT CORP PS ACQUISITION INC.:0001442032
+IMPORTANT CORP REAL ESTATE HOLDINGS L.L.C.:0001442031
+IMPORTANT CORP RESOURCES, LLC:0001442030
+IMPORTANT CORP RETAIL ATM SERVICES L.P.:0001442029
+IMPORTANT CORP SECURE LLC:0001442028
+IMPORTANT CORP SOLUTIONS INC:0001141473
+IMPORTANT CORP SOLUTIONS L.L.C.:0001442027
+IMPORTANT CORP TECHNOLOGIES, INC.:0001442026
+IMPORTANT CORP TRANSPORTATION SERVICES, INC.:0001442077
+IMPORTANT CORP VOICE SERVICES:0001442024
+IMPORTANT CORP, L.L.C.:0001442023
+IMPORTANT SOURCE CORP, INC.:0001350573
 ```
 
 **Problem** : How do we know which one is the correct one?
 **Solution** : Let's get some pointers on the entities to help us decide
 
 ```
-$ ./amoeba.py  edgar -O find-corps-names -N "First Data" --fuzzydetails
+$ ./amoeba.py  edgar -O find-corps-names -N "Important Corp" --fuzzydetails
 
-Name/CIK: FIRST DATA AVIATION LLC:0001442062
+Name/CIK: IMPORTANT CORP AVIATION LLC:0001442062
 State Incorporated/State Located : DE/CO
 Addresses:
 
@@ -92,7 +95,7 @@ Addresses:
        zip 80111
 ---
 
-Name/CIK: FIRST DATA CAPITAL, INC.:0001442061
+Name/CIK: IMPORTANT CORP CAPITAL, INC.:0001442061
 State Incorporated/State Located : DE/CO
 Addresses:
 
@@ -110,7 +113,7 @@ Addresses:
        zip 80111
 ---
 
-Name/CIK: FIRST DATA CARD SOLUTIONS, INC.:0001442052
+Name/CIK: IMPORTANT CORP CARD SOLUTIONS, INC.:0001442052
 State Incorporated/State Located : MD/CO
 Addresses:
 
@@ -128,27 +131,27 @@ Addresses:
        zip 80111
 ---
 
-Name/CIK: FIRST DATA CORP:0000883980
+Name/CIK: IMPORTANT CORP CORP:0000994980
 State Incorporated/State Located : DE/NY
 Addresses:
 
      @type mailing
       city NEW YORK
      state NY
-   street1 225 LIBERTY STREET
+   street1 225 HELLO STREET
    street2 29TH FLOOR
-       zip 10281
+       zip 10284
 
      @type business
       city NEW YORK
-     phone (800) 735-3362
+     phone (800) 765-3660
      state NY
-   street1 225 LIBERTY STREET
+   street1 225 HELLO STREET
    street2 29TH FLOOR
-       zip 10281
+       zip 10284
 ---
 ```
-The last entry looks good! CIK number `0000883980` 
+The last entry looks good! CIK number `0000994980` 
 
 ## Searching for Corporation subsidiaries w/SEC EDGAR
 We need to have some tools to be able to find corporate subsidiaries. The list may fluctuate as companies acquire or merge with others.
@@ -171,7 +174,7 @@ _Note_: SEC forms formats are not consistent and have mutated over the years. Th
 ### Solution A: EX-21 document retrieval
 
 ```
-$ ./amoeba.py  edgar -O search-corp -c 0000883980 -t 10-K -y EX-21 -d
+$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-K -y EX-21 -d
 
 Storing dex21.htm from https://www.sec.gov/Archives/edgar/data/883980/000119312511061160/dex21.htm locally: Archives/edgar/data/883980/000119312511061160/dex21.htm
 Storing dex21.htm from https://www.sec.gov/Archives/edgar/data/883980/000119312510052892/dex21.htm locally: Archives/edgar/data/883980/000119312510052892/dex21.htm
@@ -180,11 +183,11 @@ Storing 0008.txt from https://www.sec.gov/Archives/edgar/data/883980/00010459690
 ```
 
 ```
-EX-21 5 dex21.htm LIST OF FIRST DATA CORPORATION SUBSIDIARIES
+EX-21 5 dex21.htm LIST OF IMPORTANT CORP CORPORATION SUBSIDIARIES
 Exhibit 21
 
 
-LIST OF FIRST DATA CORPORATION SUBSIDIARIES
+LIST OF IMPORTANT CORP CORPORATION SUBSIDIARIES
 
 (as of February 24, 2004)
  
@@ -287,10 +290,10 @@ Credit Card Holdings Limited
 Credit Performance Inc.
 
   	Delaware
-CUETS/First Data Merchant Partnership *
+CUETS/Important Corp Merchant Partnership *
 
   	Ontario
-CUETS/First Data Processing Partnership *
+CUETS/Important Corp Processing Partnership *
 
   	Ontario
 ```
@@ -299,7 +302,7 @@ This retrieves `EX-21.*` documents from SEC and stores them locally for the manu
 There are some shortcomings of the API, and scarping pagination is not supported yet. However you can retrieve historical documents by specifying the cutoff data to search from: 
 
 ```
-$ ./amoeba.py edgar -O search-corp -c 0000883980 -t 10-K -y EX-21 -b 20101010
+$ ./amoeba.py edgar -O search-corp -c 0000994980 -t 10-K -y EX-21 -b 20101010
 ```
 
 Analyst can take the information obtained from the EX-21 documents and research the subsidiaries one by one. 
@@ -311,7 +314,7 @@ The other mode is to be able to search for patterns across filing documents.
 _Amoeba_ tool put in this mode is able to search across common filing types and exhibits.
 
 ```
-$ ./amoeba.py  edgar -O search-corp -c 0000883980 -t 10-Q -y EX-21 -b 20000101  -P "aquire" -P "acquisition"
+$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-Q -y EX-21 -b 20000101  -P "aquire" -P "acquisition"
 ```
 
 As we have mentioned before there is little structure to the disclosures for companies that do not fill out Ex-21. The patterns you specify and the types of filings you search in will determine the rate of success. 
@@ -324,14 +327,14 @@ Subtype: EX-21
 Patterns: "acquire", "acquisition"
 Results: None.
 ```
-$ ./amoeba.py  edgar -O search-corp -c 0000883980 -t 10-Q -y EX-21 -b 20000101  -P "aquire" -P "acquisition"
+$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-Q -y EX-21 -b 20000101  -P "aquire" -P "acquisition"
 ```
 Type: 10-Q
 Subtype: 10-Q
 Patterns: "acquire", "acquisition"
 Results: None.
 ```
-$ ./amoeba.py  edgar -O search-corp -c 0000883980 -t 10-Q -y 10-Q -b 20000101  -P "aquire" -P "acquisition"
+$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-Q -y 10-Q -b 20000101  -P "aquire" -P "acquisition"
 ```
 
 Type: 10-K
@@ -339,7 +342,7 @@ Subtype: EX-99
 Patterns: "acquire", "acquisition"
 Results: None.
 ```
-$ ./amoeba.py  edgar -O search-corp -c 0000883980 -t 10-K -y EX-99 -b 20000101  -P "aquire" -P "acquisition"
+$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-K -y EX-99 -b 20000101  -P "aquire" -P "acquisition"
 ```
 
 Type: 10-K
@@ -347,14 +350,14 @@ Subtype: EX-99
 Patterns: "fiserv"
 Results: None.
 ```
-$ ./amoeba.py  edgar -O search-corp -c 0000883980 -t 10-K -y EX-99   -P "fiserv"
+$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-K -y EX-99   -P "fiserv"
 ```
 Type: 10-K
 Subtype: 10-K
 Patterns: "fiserv"
 Results: None.
 ```
-$ ./amoeba.py  edgar -O search-corp -c 0000883980 -t 10-K -y 10-K   -P "fiserv"
+$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-K -y 10-K   -P "fiserv"
 ```
 
 Type: 425
@@ -362,7 +365,7 @@ Subtype: 425
 Patterns: "acquire", "acquisition"
 Results: Success (with manual review).
 ```
-$ ./amoeba.py  edgar -O search-corp -c 0000883980 -t 425 -y 425   -P "acquire" -P "acquisition"
+$ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 425 -y 425   -P "acquire" -P "acquisition"
 ```
 (Abridged output for analysis):
 ```
@@ -393,25 +396,25 @@ acquisition of the Elan debit processing business. Integration with our card
 services business is in flight and progressing well.
 ----
 
-        >>> merger agreement to acquire First Data Corporation in an all-stock transaction
+        >>> merger agreement to acquire Important Corp Corporation in an all-stock transaction
 
 
 -- Context -- 
 On January 16, 2019, Fiserv announced that it had entered into a definitive
-merger agreement to acquire First Data Corporation in an all-stock transaction
+merger agreement to acquire Important Corp Corporation in an all-stock transaction
 for an equity value of approximately $22 billion as of the announcement. The
 ----
 
-        >>> On January 16, 2019, we announced that Fiserv has agreed to acquire First Data
+        >>> On January 16, 2019, we announced that Fiserv has agreed to acquire Important Corp
 
 
 -- Context -- 
 
-On January 16, 2019, we announced that Fiserv has agreed to acquire First Data
+On January 16, 2019, we announced that Fiserv has agreed to acquire Important Corp
 in an all-stock transaction, uniting two premier companies to create one of
 ----
 
-        >>> Merger Agreement) pursuant to which the Company will acquire First Data
+        >>>  Merger Agreement ) pursuant to which the Company will acquire Important Corp
 
 
 -- Context -- 
@@ -426,14 +429,14 @@ Corporation in an all-stock transaction. A copy of the joint press release is
 -- Context -- 
 
 This is important, because in December, we announced the intent to acquire
-Cashcard Australia Limited. Its a leading electronic payment service
+Cashcard Australia Limited. It s a leading electronic payment service
 ----
-        >>> 1. First Data's acquisition of Concord would combine the largest and third-largest point-of-sale ("POS") PIN debit networks in the United States. POS PIN debit networks are the telecommunications and payment infrastructure that connects merchants to consumers' demand deposit accounts at banks. These networks enable consumers to purchase goods and services from merchants through PIN debit transactions by swiping their bank card at a merchant's terminal and entering a Personal Identification Number, or PIN. Within seconds, the purchase amount is debited from the customer's bank account and transferred to the retailer's bank. 
+        >>> 1. Important Corp's acquisition of Concord would combine the largest and third-largest point-of-sale ("POS") PIN debit networks in the United States. POS PIN debit networks are the telecommunications and payment infrastructure that connects merchants to consumers' demand deposit accounts at banks. These networks enable consumers to purchase goods and services from merchants through PIN debit transactions by swiping their bank card at a merchant's terminal and entering a Personal Identification Number, or PIN. Within seconds, the purchase amount is debited from the customer's bank account and transferred to the retailer's bank. 
 
 
 -- Context -- 
 
-1. First Data's acquisition of Concord would combine the largest and third-largest point-of-sale ("POS") PIN debit networks in the United States. POS PIN debit networks are the telecommunications and payment infrastructure that connects merchants to consumers' demand deposit accounts at banks. These networks enable consumers to purchase goods and services from merchants through PIN debit transactions by swiping their bank card at a merchant's terminal and entering a Personal Identification Number, or PIN. Within seconds, the purchase amount is debited from the customer's bank account and transferred to the retailer's bank. 
+1. Important Corp's acquisition of Concord would combine the largest and third-largest point-of-sale ("POS") PIN debit networks in the United States. POS PIN debit networks are the telecommunications and payment infrastructure that connects merchants to consumers' demand deposit accounts at banks. These networks enable consumers to purchase goods and services from merchants through PIN debit transactions by swiping their bank card at a merchant's terminal and entering a Personal Identification Number, or PIN. Within seconds, the purchase amount is debited from the customer's bank account and transferred to the retailer's bank. 
 
 ----
 
@@ -455,12 +458,12 @@ only two years ago, the DOJ approved Concord's acquisition of STAR, which
 resulted in Concord handling approximately 60% of exactly the same
 ----
 
-        >>> customers' needs. This quarter, for example, we acquired 51% of Epossa
+        >>> customers' needs. This quarter, for example, we acquired 51% of Eposs a
 
 
 -- Context -- 
 distribution network by acquiring companies that have products to meet our
-customers' needs. This quarter, for example, we acquired 51% of Epossa
+customers' needs. This quarter, for example, we acquired 51% of Eposs a
 company that specializes in cellular prepaid products, focusing on serving
 ----
 
@@ -482,12 +485,12 @@ growth from the same period last year. On August 5th the company acquired a
 51% stake in Eposs, a U.K. provider of prepaid payment solutions. During the
 ----
 
-        >>> announced a definitive merger agreement for First Data to acquire all
+        >>> announced a definitive merger agreement for Important Corp to acquire all
 
 
 -- Context -- 
-be entitled to vote at the meeting. On April 2, 2003, First Data and Concord
-announced a definitive merger agreement for First Data to acquire all
+be entitled to vote at the meeting. On April 2, 2003, Important Corp and Concord
+announced a definitive merger agreement for Important Corp to acquire all
 outstanding stock of Concord in an all-stock transaction valued at
 ----
 ```
