@@ -1,0 +1,14 @@
+attrs==19.3.0
+certifi==2019.11.28
+chardet==3.0.4
+defusedxml==0.6.0
+edgar==5.1.14
+html2text==2020.1.16
+idna==2.9
+lxml==4.5.0
+netaddr==0.7.19
+python-dateutil==2.8.1
+requests==2.23.0
+six==1.14.0
+urllib3==1.25.8
+xmltodict==0.12.0
