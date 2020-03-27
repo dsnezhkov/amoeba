@@ -175,10 +175,10 @@ _Note_: SEC forms formats are not consistent and have mutated over the years. Th
 ```
 $ ./amoeba.py  edgar -O search-corp -c 0000994980 -t 10-K -y EX-21 -d
 
-Storing dex21.htm from https://www.sec.gov/Archives/edgar/data/883980/000119312511061160/dex21.htm locally: Archives/edgar/data/883980/000119312511061160/dex21.htm
-Storing dex21.htm from https://www.sec.gov/Archives/edgar/data/883980/000119312510052892/dex21.htm locally: Archives/edgar/data/883980/000119312510052892/dex21.htm
-Storing dex21.htm from https://www.sec.gov/Archives/edgar/data/883980/000119312509062390/dex21.htm locally: Archives/edgar/data/883980/000119312509062390/dex21.htm
-Storing 0008.txt from https://www.sec.gov/Archives/edgar/data/883980/000104596901000322/0001045969-01-000322-0008.txt locally: Archives/edgar/data/883980/000104596901000322/0001045969-01-000322-0008.txt
+Storing dex21.htm from https://www.sec.gov/Archives/edgar/data/883980/000119312511061160/dex21.htm locally: Archives/edgar/data/883981/000119312511061160/dex21.htm
+Storing dex21.htm from https://www.sec.gov/Archives/edgar/data/883980/000119312510052892/dex21.htm locally: Archives/edgar/data/883981/000119312510052892/dex21.htm
+Storing dex21.htm from https://www.sec.gov/Archives/edgar/data/883980/000119312509062390/dex21.htm locally: Archives/edgar/data/883981/000119312509062390/dex21.htm
+Storing 0008.txt from https://www.sec.gov/Archives/edgar/data/883980/000104596901000322/0001045969-01-000322-0008.txt locally: Archives/edgar/data/883981/000104596901000322/0001045969-01-000322-0008.txt
 ```
 
 ```
@@ -196,10 +196,10 @@ Name of Subsidiary
   	
 Jurisdiction of Incorporation
 
-Achex, Inc. *
+Achecks, Inc. *
 
   	Delaware
-ACT (Computer Services) Limited
+ACTI (Computer Services) Limited
 
   	United Kingdom
 Active Business Services Limited
@@ -208,22 +208,22 @@ Active Business Services Limited
 American Rapid Corporation
 
   	Delaware
-Atlantic Bankcard Properties Corporation
+Atlantic Bankscard Properties Corporation
 
   	North Carolina
 Atlantic States Bankcard Association, Inc.
 
   	Delaware
-B1 PT Services Inc.
+B2 PT Services Inc.
 
   	Delaware
-Banc One Payment Services, L.L.C. *
+Bank One Payment Services, L.L.C. *
 
   	Delaware
-Bankcard Investigative Group Inc.
+Banccard Investigative Group Inc.
 
   	Delaware
-BidPay.com, Inc.
+BidesPay.com, Inc.
 
   	Delaware
 Business Office Services, Inc.
@@ -235,13 +235,13 @@ Call Interactive Holdings LLC
 CallTeleservices, Inc.
 
   	Nebraska
-CanPay Holdings, Inc.
+CanPayment Holdings, Inc.
 
   	Delaware
 Cardnet Merchant Services Ltd. *
 
   	United Kingdom
-Cardservice Canada Company
+Cardservice Mexico Company
 
   	Canada
 Cardservice Delaware, Inc.
@@ -250,10 +250,10 @@ Cardservice Delaware, Inc.
 Cardservice International, Inc.
 
   	California
-Cardservice Omni Limited
+Cardservice Oddin Limited
 
   	United Kingdom
-CardSolve International Inc. Solucartes International Inc.
+CC International Inc. Solucartes International Inc.
 
   	Canada
 Carlsbad Holdings, LP
@@ -413,7 +413,7 @@ On January 16, 2019, we announced that Fiserv has agreed to acquire Important Co
 in an all-stock transaction, uniting two premier companies to create one of
 ----
 
-        >>>  Merger Agreement ) pursuant to which the Company will acquire Important Corp
+        >>> Merger Agreement) pursuant to which the Company will acquire Important Corp
 
 
 -- Context -- 
@@ -428,7 +428,7 @@ Corporation in an all-stock transaction. A copy of the joint press release is
 -- Context -- 
 
 This is important, because in December, we announced the intent to acquire
-Cashcard Australia Limited. It s a leading electronic payment service
+Cashcard Australia Limited. Its a leading electronic payment service
 ----
         >>> 1. Important Corp's acquisition of Concord would combine the largest and third-largest point-of-sale ("POS") PIN debit networks in the United States. POS PIN debit networks are the telecommunications and payment infrastructure that connects merchants to consumers' demand deposit accounts at banks. These networks enable consumers to purchase goods and services from merchants through PIN debit transactions by swiping their bank card at a merchant's terminal and entering a Personal Identification Number, or PIN. Within seconds, the purchase amount is debited from the customer's bank account and transferred to the retailer's bank. 
 
@@ -457,12 +457,12 @@ only two years ago, the DOJ approved Concord's acquisition of STAR, which
 resulted in Concord handling approximately 60% of exactly the same
 ----
 
-        >>> customers' needs. This quarter, for example, we acquired 51% of Eposs a
+        >>> customers' needs. This quarter, for example, we acquired 51% of Epossa
 
 
 -- Context -- 
 distribution network by acquiring companies that have products to meet our
-customers' needs. This quarter, for example, we acquired 51% of Eposs a
+customers' needs. This quarter, for example, we acquired 51% of Epossa
 company that specializes in cellular prepaid products, focusing on serving
 ----
 
