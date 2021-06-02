@@ -10,5 +10,5 @@ netaddr==0.7.19
 python-dateutil==2.8.1
 requests==2.23.0
 six==1.14.0
-urllib3==1.25.8
+urllib3==1.26.5
 xmltodict==0.12.0
